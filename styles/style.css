@@ -1,10 +1,129 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-.poppins-font{
+
+.poppins-font {
     font-family: poppins;
     font-weight: 400;
     font-size: 16px;
 }
-.h
+
+/* shared style */
+.display-flex {
+    display: flex;
+}
+
+.dark1 {
+    color: rgba(58, 58, 58, 1);
+}
+
+.round {
+    border-radius: 50px;
+}
+
+/* header----------------------------------- */
+.header {
+    max-width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+nav {
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.nav-links {
+    list-style: none;
+
+    gap: 32px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: rgba(58, 58, 58, 1);
+    font-weight: 600;
+}
+
+.brand {
+    font-weight: 700;
+    font-size: 3rem;
+    color: rgba(58, 58, 58, 1);
+}
+
+.banner {
+    max-width: 1320px;
+    display: flex;
+    /* gap: 132px; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0px 100px;
+}
+
+.banner-content {
+    max-width: 582px;
+}
+
+.banner-title {
+    font-size: 3.25rem;
+    margin: 0px;
+}
+.banner-description{
+    font-weight: 600;
+    margin: 16px 0px;
+}
+
+.primary-button{
+    border-radius: 41px;
+    background-color: rgba(224, 44, 109, 1);
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    font-weight: 700;
+}
+.banner-image img{
+    width: 100%;
+}
+.banner-image{
+    background-image: url('../assets/images/Circle\ design.svg');
+}
+.sponsor{
+    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    align-items: center;
+    gap: 60px;
+    border-top: 1px solid rgba(58, 58, 58, 0.2);
+    border-bottom: 1px solid rgba(58, 58, 58, 0.2);
+}
+
+/*responsive media query*/
+@media screen and (max-width:576px){
+    nav{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .nav-links{
+        gap: 10px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-content{
+        text-align: center;
+        padding: 10px;
+    }
+    .sponsor{
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
