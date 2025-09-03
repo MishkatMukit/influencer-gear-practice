@@ -10,14 +10,16 @@
 }
 
 /* shared style */
-main section{
+main section {
     max-width: 1320px;
     margin: 0 auto;
     margin-bottom: 100px;
 }
-.border{
+
+.border {
     border: 2px solid black;
 }
+
 .display-flex {
     display: flex;
 }
@@ -117,11 +119,12 @@ nav {
 }
 
 /* collection */
-.collection-title{
+.collection-title {
     font-size: 1.75rem;
     text-align: center;
     margin-bottom: 35px;
 }
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, 330px);
@@ -134,7 +137,7 @@ nav {
 .card {
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);   
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
 
 .card-title {
@@ -171,16 +174,38 @@ nav {
     font-weight: 700;
     color: rgb(88, 88, 104);
 }
-#see-more a{
+
+#see-more a {
     text-decoration: none;
     color: rgba(224, 44, 109, 0.87);
     font-weight: 700;
 }
-#see-more{
+
+#see-more {
     margin: 50px auto 0px;
     max-width: 1050px;
     display: flex;
     justify-content: end;
+}
+
+.featured {
+    max-width: 1200px;
+    gap: 96px;
+    align-items: center;
+}
+
+.featured-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.featured-description {
+    font-weight: 700;
+    margin: 16px 0px;
+}
+
+.featured .primary-button {
+    border-radius: 5px;
 }
 
 /*responsive media query*/
@@ -199,7 +224,8 @@ nav {
         margin: 0 auto;
     }
 
-    .banner {
+    .banner,
+    .featured {
         flex-direction: column-reverse;
     }
 
@@ -213,13 +239,25 @@ nav {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
     }
-    .card-container{
+
+    .card-container {
         grid-template-columns: repeat(1, 1fr);
     }
-    #see-more{
+
+    #see-more {
         max-width: 332px;
         margin-top: 10px;
-        
+
+    }
+    .featured{
+        gap: 30px;
+    }
+    .featured-info{
+        text-align: center;
+        padding: 20px;
+    }
+    .featured img{
+        width: calc(100% - 40px);
     }
 }
 
@@ -234,7 +272,8 @@ nav {
         margin: 0 auto;
     }
 
-    .banner {
+    .banner,
+    .featured{
         flex-direction: column-reverse;
     }
 
@@ -249,13 +288,25 @@ nav {
         justify-items: center;
 
     }
-    .card-container{
+
+    .card-container {
         grid-template-columns: repeat(2, 332px);
-        
+
     }
-    #see-more{
+
+    #see-more {
         justify-content: flex-start;
         max-width: 694px;
-        
+
+    }
+    .featured{
+        gap: 30px;
+    }
+    .featured-info{
+        text-align: center;
+        padding: 20px;
+    }
+    .featured img{
+        width: calc(100% - 40px);
     }
 }
