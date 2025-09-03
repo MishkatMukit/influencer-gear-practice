@@ -106,6 +106,8 @@ nav {
 
 .banner-image {
     background-image: url('../assets/images/Circle\ design.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .sponsor {
